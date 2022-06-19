@@ -1,0 +1,6 @@
+# syntax=docker/dockerfile:1
+FROM python:3.7
+WORKDIR datasets
+COPY requirements.txt requirements.txt
+RUN python -m pip install --upgrade pip setuptools
+RUN pip install -r requirements.txt
